@@ -1,7 +1,11 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
-    "local>nv-gha-runners/renovate-config",
+    "config:recommended",
+    ":configMigration",
+    "schedule:monthly",
     "group:allNonMajor"
-  ]
+  ],
+  "minimumReleaseAge": "7 days",
+  "minimumReleaseAgeBehaviour": "timestamp-optional"
 }
